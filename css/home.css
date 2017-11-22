@@ -1,0 +1,37 @@
+/* COLORS */
+/* THEME */
+.wrapper {
+  display: flex;
+  height: calc(100% - 60px);
+  text-align: center; }
+  .wrapper > .section {
+    color: #000;
+    display: block;
+    width: 50%;
+    height: 100%; }
+    .wrapper > .section h2 {
+      color: #fff; }
+    .wrapper > .section.design {
+      background-color: #59a6dd; }
+      .wrapper > .section.design .text {
+        left: 50%; }
+    .wrapper > .section.consulting {
+      background-color: #fee35f; }
+    .wrapper > .section .text {
+      transition: all 0.3s ease;
+      opacity: 0;
+      background-color: #fff;
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      top: 0;
+      pointer-events: none; }
+    .wrapper > .section .cta:hover + .text {
+      opacity: 1;
+      height: 100%;
+      pointer-events: default; }
+
+.top-bar {
+  height: 60px; }
+
+/*# sourceMappingURL=home.css.map */

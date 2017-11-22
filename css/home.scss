@@ -1,0 +1,55 @@
+@import "colors";
+@import "tools";
+
+.wrapper                        {
+
+	display: 		flex;
+	height: 		calc(100% - 60px);
+	text-align: 	center;
+
+	> .section             		{
+		color: #000;
+		display: 	block;
+		width: 		50%;
+		height: 	100%;
+
+		h2 						{
+			color: #fff;
+		}
+
+		&.design 				{
+			background-color: 	$brainds-design;
+			.text {
+				left: 				50%;
+			}
+		}
+		&.consulting 			{
+			background-color: 	$brainds-consulting;
+		}
+
+		.text 					{
+			@include animate;
+			opacity: 			0;
+			background-color: 	#fff;
+			position: 			absolute;
+			height: 			100%;
+			width: 				50%;
+			top: 0;
+			pointer-events: 	none;
+		}
+
+		.cta 					{
+			&:hover 			{
+				+ .text 		{
+					opacity: 1;
+					height: 			100%;
+					pointer-events: 	default;
+				}
+			}
+		}
+	}	
+}
+
+.top-bar {
+	height: 60px;
+}
